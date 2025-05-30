@@ -1,0 +1,16 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CardGamesApp.MainWindow"
+        Width="400" Height="300" Title="Gry Karciane">
+	<StackPanel Margin="10" Spacing="10">
+		<TextBlock Text="Witaj w grach karcianych!" FontSize="20"/>
+		<TextBlock Text="Podaj login gracza:" />
+		<TextBox Name="LoginTextBox" Width="200"/>
+		<Button Content="Zaloguj" Click="OnLoginClicked"/>
+		<TextBlock Name="WelcomeText" Text="" Foreground="Green"/>
+		<Button Content="Zagraj w 'Wojnę'" Click="OnWarGameClicked"/>
+		<Button Content="Zagraj w 'Memo'" Click="OnMemoClicked"/>
+		<Button Content="Zagraj w 'Blackjack'" Click="OnBlackjackClicked"/>
+		<Button Content="Historia rozgrywek" Click="OnHistoryClicked"/>
+	</StackPanel>
+</Window>
