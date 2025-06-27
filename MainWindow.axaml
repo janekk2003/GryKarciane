@@ -5,9 +5,9 @@
 	<StackPanel Margin="10" Spacing="10">
 		<TextBlock Text="Witaj w grach karcianych!" FontSize="20"/>
 		<TextBlock Text="Podaj login gracza:" />
-		<TextBox Name="LoginTextBox" Width="200"/>
+		<TextBox x:Name="LoginTextBox" Width="200"/>
 		<Button Content="Zaloguj" Click="OnLoginClicked"/>
-		<TextBlock Name="WelcomeText" Text="" Foreground="Green"/>
+		<TextBlock x:Name="WelcomeText" Text="" Foreground="Green"/>
 		<Button Content="Zagraj w 'Wojnę'" Click="OnWarGameClicked"/>
 		<Button Content="Zagraj w 'Memo'" Click="OnMemoClicked"/>
 		<Button Content="Zagraj w 'Blackjack'" Click="OnBlackjackClicked"/>

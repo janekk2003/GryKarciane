@@ -1,7 +1,21 @@
 <Window xmlns="https://github.com/avaloniaui"
-		xmlns:controls="clr-namespace:Avalonia.Controls;assembly=Avalonia.Controls.DataGrid"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CardGamesApp"
         x:Class="CardGamesApp.HistoryWindow"
-        Title="Historia Rozgrywek" Width="500" Height="400">
-	<controls:DataGrid Name="HistoryGrid" AutoGenerateColumns="True" />
+        x:DataType="local:GameResult"
+        Title="Historia gier"
+        Width="600"
+        Height="400">
+
+  <StackPanel Margin="10" Spacing="10">
+		<TextBlock Text="Witaj w grach karcianych!" FontSize="20"/>
+    <DataGrid x:Name="HistoryGrid" Margin="10" Background="White">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Gracz" Binding="{Binding Player}" />
+        <DataGridTextColumn Header="Gra" Binding="{Binding Game}" />
+        <DataGridTextColumn Header="Wynik" Binding="{Binding Result}" />
+        <DataGridTextColumn Header="Data" Binding="{Binding Date}" />
+      </DataGrid.Columns>
+    </DataGrid>
+  </StackPanel>
 </Window>

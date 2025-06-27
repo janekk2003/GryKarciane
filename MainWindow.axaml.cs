@@ -6,17 +6,16 @@ namespace CardGamesApp
 {
     public partial class MainWindow : Window
     {
-        private string _currentPlayer = null;
-        private static List<GameResult> _history = new();
-
         public MainWindow()
         {
             InitializeComponent();
         }
+        private string _currentPlayer = string.Empty;
+        private static List<GameResult> _history = new();
 
         private void OnLoginClicked(object sender, RoutedEventArgs e)
         {
-            _currentPlayer = LoginTextBox.Text;
+            _currentPlayer = LoginTextBox.Text ?? string.Empty;
             WelcomeText.Text = $"Zalogowano jako {_currentPlayer}";
         }
 

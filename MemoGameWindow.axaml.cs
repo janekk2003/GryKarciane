@@ -10,13 +10,16 @@ namespace CardGamesApp
 {
     public partial class MemoGameWindow : Window
     {
-        private string _player;
-        private List<GameResult> _history;
-        private int _correctPosition;
-
-        public MemoGameWindow(string player, List<GameResult> history)
+        public MemoGameWindow()
         {
             InitializeComponent();
+        }
+        private string _player = string.Empty;
+        private List<GameResult> _history = new List<GameResult>();
+        private int _correctPosition;
+
+        public MemoGameWindow(string player, List<GameResult> history) : this()
+        {
             _player = player;
             _history = history;
 

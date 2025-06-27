@@ -3,10 +3,10 @@
         x:Class="CardGamesApp.BlackjackGameWindow"
         Title="Blackjack" Width="400" Height="300">
 	<StackPanel Margin="10" Spacing="10">
-		<TextBlock Name="InfoText" Text="Kliknij, by dobrać kartę (max 21)" />
+		<TextBlock x:Name="InfoText" Text="Kliknij, by dobrać kartę (max 21)" />
 		<Button Content="Dobierz kartę" Click="OnDrawClicked"/>
 		<Button Content="Zakończ" Click="OnFinishClicked"/>
-		<TextBlock Name="ResultText"/>
+		<TextBlock x:Name="ResultText"/>
 		<Button Content="Zamknij" Click="OnCloseClicked"/>
 	</StackPanel>
 </Window>

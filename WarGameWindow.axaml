@@ -3,7 +3,7 @@
         x:Class="CardGamesApp.WarGameWindow"
         Width="400" Height="300" Title="Gra: Wojna">
 	<StackPanel Margin="10" Spacing="10">
-		<TextBlock Name="StatusText" Text="Kliknij aby zagrać rundę." />
+		<TextBlock x:Name="StatusText" Text="Kliknij aby zagrać rundę." />
 		<Button Content="Zagraj rundę" Click="OnPlayRoundClicked"/>
 		<Button Content="Zamknij" Click="OnCloseClicked"/>
 	</StackPanel>

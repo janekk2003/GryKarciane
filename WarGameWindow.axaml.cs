@@ -7,21 +7,24 @@ namespace CardGamesApp
 {
     public partial class WarGameWindow : Window
     {
-        private string _player;
-        private List<GameResult> _history;
-
-        public WarGameWindow(string player, List<GameResult> history)
+        public WarGameWindow()
         {
             InitializeComponent();
+        }
+        private string _player = string.Empty;
+        private List<GameResult> _history = new List<GameResult>();
+
+        public WarGameWindow(string player, List<GameResult> history) : this()
+        {
             _player = player;
-            _history = new List<GameResult>();
+            _history = history;
             StatusText.Text = $"Witaj {_player}, zagrajmy w Wojne!";
         }
 
         private void OnPlayRoundClicked(object sender, RoutedEventArgs e)
         {
             var rnd = new Random();
-            int playerCard = rnd.Next(2, 15); // 2–14 (A)
+            int playerCard = rnd.Next(2, 15); // 2ï¿½14 (A)
             int computerCard = rnd.Next(2, 15);
 
             string result;
@@ -32,7 +35,7 @@ namespace CardGamesApp
             else
                 result = "Remis.";
 
-            StatusText.Text = $"{_player}: {playerCard} vs Komputer: {computerCard} — {result}";
+            StatusText.Text = $"{_player}: {playerCard} vs Komputer: {computerCard} ï¿½ {result}";
         }
 
         private void OnCloseClicked(object sender, RoutedEventArgs e)

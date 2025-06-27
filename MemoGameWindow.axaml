@@ -3,9 +3,9 @@
         x:Class="CardGamesApp.MemoGameWindow"
         Title="Memo" Width="400" Height="300">
 	<StackPanel Margin="10" Spacing="10">
-		<TextBlock Name="QuestionText" Text="Zapamiętaj pozycję A: 1" />
+		<TextBlock x:Name="QuestionText" Text="Zapamiętaj pozycję A: 1" />
 		<Button Content="Kliknij, gdy gotów" Click="OnPlayerReadyClicked"/>
-		<TextBlock Name="ResultText"/>
+		<TextBlock x:Name="ResultText"/>
 		<Button Content="Zamknij" Click="OnCloseClicked"/>
 	</StackPanel>
 </Window>
